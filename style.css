@@ -5,3 +5,7 @@ body{
 .clicked{
     background-color: red;
 }
+
+.hidden{
+    display : none;
+}
