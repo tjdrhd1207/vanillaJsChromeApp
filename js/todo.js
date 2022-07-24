@@ -4,7 +4,7 @@ const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY = "todos";
 
-const toDos = [];
+let toDos = [];
 
 function saveToDos(){
     localStorage.setItem("todos",JSON.stringify(toDos));
@@ -13,20 +13,24 @@ function saveToDos(){
 function deleteToDo(event){
   const li = event.target.parentElement;
   li.remove();
+  console.dir(li.id);
+  console.log(localStorage);
+
 }
  
 function paintToDo(newTodo){
     console.log("i will paint", newTodo);
     const li = document.createElement("li");
+    //li.setAttribute("id",newTodo.id); 아래와 동일
+    li.id = newTodo.id;
     const span = document.createElement("span");
-    span.innerText = newTodo;
+    span.innerText = newTodo.text;
     const button = document.createElement("button");
     button.innerText=" ❌";
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);
     
-
     toDoList.appendChild(li);
 }
 
@@ -35,8 +39,13 @@ function handleToDoSubmit(event){
     console.log("하이"+toDoInput.value);
     const newToDo = toDoInput.value;
     toDoInput.value = "";
-    toDos.push(newToDo);
-    paintToDo(newToDo);
+
+    const newToDoObj = {
+        text : newToDo,
+        id : Date.now()
+    };
+    toDos.push(newToDoObj);
+    paintToDo(newToDoObj);
     saveToDos();
 }
 
@@ -50,8 +59,8 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if(savedToDos != null){
     const parsedToDos = JSON.parse(savedToDos);
-    console.log(parsedToDos);
-    parsedToDos.forEach((item)=>console.log("this is turn of", item));
+    toDos = parsedToDos;
+    parsedToDos.forEach(paintToDo);
 }
 
 console.log(savedToDos);
