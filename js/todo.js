@@ -14,7 +14,10 @@ function deleteToDo(event){
   const li = event.target.parentElement;
   li.remove();
   console.dir(li.id);
-  console.log(localStorage);
+  const removeLiId = parseInt(li.id);
+  //console.log(typeof removeLiId);
+  toDos = toDos.filter(item => item.id != removeLiId);
+  saveToDos();
 
 }
  
@@ -62,5 +65,7 @@ if(savedToDos != null){
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
 }
+
+
 
 console.log(savedToDos);
