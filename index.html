@@ -10,19 +10,26 @@
 <body>
     
     <form id="login-form" class="hidden">
-      <input type="text" placeholder="What is your name?" />
-      <button>Log In</button>
+      <span id="nameQuestion">What's your name?</span>
+      <input type="text" id="nameInput" class="commonInput" />
+      <button type="hidden">Log In</button>
       <a href="https://nomadcoders.co">Go to courses</a>
     </form>
     <h2 id="clock">00:00:00</h2>
     <h1 id="greeting" class="hidden"></h1>
     <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required >
+      <span id="toDoQuestion">Write a To Do and Press Enter</span>
+      <input type="text" id="toDoInput" class="commonInput" required >
     </form>
-    <ul id="todo-list">
+    <ul id="todo-list" class="commonFont">
 
     </ul>
-    <div id="quote">
+    <div id="quote" class="commonFont">
+      <span></span>
+      <span></span>
+    </div>
+    <div id="weather">
+      <img id="weatherImg"/>
       <span></span>
       <span></span>
     </div>
@@ -31,5 +38,6 @@
     <script src="js/quote.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
 </body>
-</html> To Do a list
+</html>

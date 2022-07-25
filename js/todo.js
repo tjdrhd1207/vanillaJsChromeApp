@@ -26,10 +26,13 @@ function paintToDo(newTodo){
     const li = document.createElement("li");
     //li.setAttribute("id",newTodo.id); 아래와 동일
     li.id = newTodo.id;
+    li.setAttribute("class","commonList");
     const span = document.createElement("span");
+    span.id="todoSpan";
     span.innerText = newTodo.text;
     const button = document.createElement("button");
-    button.innerText=" ❌";
+    button.innerText="x";
+    button.id="delBtn";
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);

@@ -9,3 +9,148 @@ body{
 .hidden{
     display : none;
 }
+
+#bgImg{
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    top : 0%;
+    left : 0%;
+    z-index : -1;  /*그림 뒤로보내기*/
+    /*transform : translate(-50%, -50%);*/
+}
+
+#nameQuestion{
+    position : absolute;
+    top : 40%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    color : white;
+    font-family: fantasy;
+    font-size: 60px;
+    font-style: italic;
+}
+
+.commonInput{
+    border: none;
+    background: transparent;
+    color: white;
+    border-bottom: 4px solid white;
+    width: 400px;
+    height: 40px;
+    font-size:35px;
+    font-family: fantasy;
+    font-style: italic;
+    text-align: center;
+}
+
+
+#nameInput{
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+}
+
+
+#toDoInput{
+    position : absolute;
+    top : 56%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+
+}
+
+#greeting{
+    position : absolute;
+    top : 37%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    color : white;
+    font-family: none;
+    font-size: 40px;
+    font-style: italic;
+}
+
+#clock{
+    position : absolute;
+    top : 25%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    color : white;
+    font-family: fantasy;
+    font-size: 80px;
+    font-style: italic;
+}
+
+#toDoQuestion{
+    position : absolute;
+    top : 48%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    color : white;
+    font-family: fantasy;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.commonFont{
+    color: white;
+    text-align: center;
+    list-style: none;
+    line-height: 1.5;
+}
+
+#quote{
+    position : absolute;
+    top : 97%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    font-size: 20px;
+    font-family: fantasy;
+    font-style: italic;
+    font-weight:bolder
+}
+
+#todo-list{
+    position : absolute;
+    top : 70%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+}
+
+#commonList{
+    
+    list-style: none;
+}
+
+#delBtn{
+    opacity: 1;
+    font-size: 20px;
+    font-weight: lighter;
+    cursor: pointer;
+    background: transparent;
+    color: gray;
+    border: none;
+}
+
+ #todoSpan{
+    font-size:30px;
+    font-weight: bolder;
+}
+
+#weather{
+    position: absolute;
+    top: 5%;
+    left: 80%;
+    transform: translate(20%, -50%);
+    color : white;
+    font-family: fantasy;
+}
+
+#weatherImg{
+    position: absolute;
+    top: 5%;
+    left: 85%;
+    transform: translate(20%, -50%);
+}
